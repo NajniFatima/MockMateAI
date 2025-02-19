@@ -1,0 +1,36 @@
+.mock-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #81f1be, #60d1f1,rgb(62, 147, 226));
+    height: 100vh;
+}
+
+.company-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.company-logos img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.company-logos img:hover {
+    transform: scale(1.1);
+}
+
+.start-mock-btn {
+    background: linear-gradient(160deg,rgb(28, 198, 198),rgb(158, 19, 208));
+    color: rgb(4, 4, 4);
+    font-weight:bold ;
+    padding: 15px 30px;
+    font-size: 18px;
+    border:none;
+    border-radius: 40px;
+    cursor: pointer;
+}

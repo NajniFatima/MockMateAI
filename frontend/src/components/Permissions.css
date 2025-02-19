@@ -1,0 +1,195 @@
+/* .permissions-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #81f1be, #60d1f1,rgb(62, 147, 226));
+    height: 100vh;
+}
+
+.company-options {
+    
+    margin: 20px 0;
+}
+
+.company-options label {
+    display: block;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.permission-box {
+    background: white;
+    padding: 15px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.permission-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.allow {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.block {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.allow:hover {
+    background-color: #45a049;
+}
+
+.block:hover {
+    background-color: #c0392b;
+}
+
+.proceed-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.proceed-btn:hover {
+    background-color: #007bb5;
+} */
+
+
+
+
+
+/* Full Page Styling */
+.permissions-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #81f1be, #60d1f1,rgb(62, 147, 226));
+}
+
+/* Company Selection Box */
+.company-selection {
+    height:320px;
+    width: 250px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #989c9e, #a6c0fe);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.company-selection h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-group label {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-group input[type="radio"]:checked {
+    border: 5px solid rgb(2, 164, 2);
+}
+
+/* Permission Box */
+.permission-box {
+    height:100px;
+    width: 300px;
+    padding: 15px;
+    background: linear-gradient(to bottom, #939597, #c9d4edb1);
+    border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.permission-box h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.allow, .block {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.allow {
+    background-color: #4CAF50;
+    color: white;
+    margin-right:80px;
+}
+
+.block {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.allow:hover {
+    background-color: #45a049;
+}
+
+.block:hover {
+    background-color: #c0392b;
+}
+
+.proceed-btn {
+    background-color: #1d7a0c;
+    color: white;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.proceed-btn:hover {
+    background-color: #007bb5;
+}
