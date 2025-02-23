@@ -4,6 +4,7 @@ import InterviewPanel from './components/interviewPanel';
 
 import MockInterview from "./components/MockInterview";
 import Permissions from "./components/Permissions";
+import Footer from "./components/Footer";
 
 function App() {
     const [page, setPage] = useState("mock");
@@ -16,6 +17,7 @@ function App() {
             {page === "permissions" && <Permissions setPage={setPage} />}
 
             <InterviewPanel />
+            <Footer />
         </div>
     );
 }
