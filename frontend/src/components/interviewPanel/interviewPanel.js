@@ -1,6 +1,6 @@
 import React from 'react';
-import AIMessage from './aiMessage';
-import VideoFeed from './videoFeed';
+import AIMessage from '../aiMessage/aiMessage';
+import VideoFeed from '../videoFeed/videoFeed';
 import './interviewPanel.css';
 
 function InterviewPanel() {
