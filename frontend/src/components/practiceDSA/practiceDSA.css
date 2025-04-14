@@ -1,67 +1,70 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
+.practicedsa-container {
+  background-color: #5b7ad0;
+  color: #ffffff;
+  padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1a1a1a;
 }
 
-h1 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
+.section {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+.table-title {
+  background-color: #1c1c1fde;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.1rem;
 }
 
-thead {
-  background-color: #f2f2f2;
+.table {
+  background-color: #304990;
+  border-radius: 10px;
 }
 
-th, td {
+.table-header, .table-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2a2a2e;
+  padding: 0.8rem 1rem;
+}
+
+.table-header {
   text-align: left;
-  padding: 14px;
-  border-bottom: 1px solid #ddd;
+  background-color: #16164f;
+  font-weight: bold;
 }
 
-tr:hover {
-  background-color: #f9f9f9;
+.table-cell {
+  flex: 1;
 }
 
-.status-checkbox {
-  transform: scale(1.2);
-  cursor: pointer;
+.status {
+  flex: 0.5; /* Slightly more space for checkbox */
 }
 
-.status-checkbox:checked {
-  accent-color: #4caf50;
+.problem {
+  flex: 1.5; /* Main content gets most space */
+}
+
+.difficulty {
+  flex: 1; /* Just enough for difficulty text */
 }
 
 .easy {
-  color: green;
-  font-weight: bold;
+  color: #00ff84;
 }
 
 .medium {
-  color: orange;
-  font-weight: bold;
+  color: #ffc107;
 }
 
 .hard {
-  color: crimson;
-  font-weight: bold;
+  color: #ff4081;
 }
 
-a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.key-icon {
+  margin-left: 0.5rem;
 }
