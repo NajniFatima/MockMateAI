@@ -1,25 +1,26 @@
-import React,{useState} from 'react';
-import Header from './components/header';
-import InterviewPanel from './components/interviewPanel';
 
-import MockInterview from "./components/MockInterview";
-import Permissions from "./components/Permissions";
-import Footer from "./components/Footer";
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import MockInterview from './components/MockInterview/MockInterview';
+import Permissions from './components/Permissions/Permissions';
+import InterviewPanel from './components/InterviewPanel/InterviewPanel';
 
 function App() {
-    const [page, setPage] = useState("mock");
-
     return (
-        <div className="App">
-            <Header />
-
-            {page === "mock" && <MockInterview setPage={setPage} />}
-            {page === "permissions" && <Permissions setPage={setPage} />}
-
-            <InterviewPanel />
+        <Router>
+            {/* <Header /> */}
+            <Routes>
+                <Route path="/" element={<MockInterview />} />
+                <Route path="/permissions" element={<Permissions />} />
+                <Route path="/interview" element={<InterviewPanel />} />
+            </Routes>
             <Footer />
-        </div>
+        </Router>
     );
 }
 
 export default App;
+
