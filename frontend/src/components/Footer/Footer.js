@@ -25,7 +25,7 @@ const Footer = () => {
             123 Street, Kolkata, India
             </p>
             <p>
-            <img src="/images/phone-icon.png" alt="Phone Icon" className="icon" />
+            <img src="/images/phone-icon.png" alt="Phone Icon" className="icon1" />
             +91 9875994510
           </p>
           <p>✉️ info@example.com</p>
