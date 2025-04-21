@@ -132,7 +132,7 @@ const InterviewPanel = () => {
             mediaRecorder.start();
             setTimeout(() => {
                 mediaRecorder.stop();
-            }, 120000); // 2 minutes
+            }, 60000); // 1 minutes
         });
     };
 
