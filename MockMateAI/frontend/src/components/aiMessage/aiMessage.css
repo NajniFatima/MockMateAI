@@ -1,0 +1,12 @@
+.ai-message-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.ai-message-box p {
+    margin: 0;
+    font-size: 16px;
+}
