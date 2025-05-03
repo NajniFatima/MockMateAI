@@ -1,0 +1,27 @@
+.interview-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.ai-message {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.end-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.end-btn:hover {
+    background-color: darkred;
+}
