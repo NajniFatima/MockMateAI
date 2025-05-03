@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './Header.css';
+import './header.css';
 import { assets } from '../../assets/assets';
 import { AppContent } from '../../context/AppContext';
 import { useNavigate } from 'react-router-dom';

@@ -1,13 +1,16 @@
 import React from 'react';
 import Navbar from '../navbar/Navbar';
 import Header from '../header/header';
-import './Home.css';
+import './home.css';
+import Practice from '../practice/Practice';
+
 
 const Home = () => {
   return (
     <div className="home-container">
-      <Navbar />
+      {/* <Navbar /> */}
       <Header />
+      <Practice /> 
     </div>
   );
 };
