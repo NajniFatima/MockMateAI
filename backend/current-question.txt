@@ -1,1 +1,1 @@
-Let’s start. How would you explain the SDLC to a non-technical stakeholder?
+Last one.what is the difference between char and varchar?

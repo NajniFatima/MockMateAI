@@ -9,7 +9,6 @@ const InterviewPanel = () => {
     const mediaRecorderRef = useRef(null);
     const [isMuted, setIsMuted] = useState(false);
     const [stream, setStream] = useState(null);
-    // const [company, setCompany] = useState("Google");
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
     const [currentQuestion, setCurrentQuestion] = useState("");
     const [isInterviewFinished, setIsInterviewFinished] = useState(false);
@@ -83,10 +82,6 @@ const InterviewPanel = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentQuestionIndex]);
     
-
-
-
-
     const startInterview = (userStream) => {
         // Start with index 0
         setCurrentQuestionIndex(0);
@@ -132,10 +127,9 @@ const InterviewPanel = () => {
             mediaRecorder.start();
             setTimeout(() => {
                 mediaRecorder.stop();
-            }, 60000); // 1 minutes
+            },6000); 
         });
     };
-
     const handleMuteToggle = () => {
         if (!stream) return;
         stream.getAudioTracks().forEach((track) => (track.enabled = !track.enabled));
