@@ -15,8 +15,8 @@
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.5",
     "nodemailer": "^6.10.1",
-    "ws": "^8.18.1",
-    "openai": "^4.95.1"
+    "openai": "^4.95.1",
+    "ws": "^8.18.1"
   },
   "name": "backend",
   "version": "1.0.0",

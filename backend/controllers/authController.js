@@ -3,26 +3,7 @@ import jwt from 'jsonwebtoken';
 import userModel from '../models/userModel.js';
 import nodemailer from 'nodemailer';
 
-// Nodemailer transporter setup
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',  // Gmail as the service provider
-//   auth: {
-//     user: process.env.EMAIL_USER,  // Your email address from the .env file
-//     pass: process.env.EMAIL_PASS,  // The generated Gmail App password
-//   },
-//   tls: {
-//     rejectUnauthorized: false,  // Optional: allows you to bypass SSL certificate errors
-//   },
-// });
 
-// // Test the transporter connection
-// transporter.verify((error, success) => {
-//   if (error) {
-//     console.error('❌ Email transporter error:', error);
-//   } else {
-//     console.log('✅ Email transporter is ready to send messages');
-//   }
-// });
 
 // 📦 Register a new user
 export const register = async (req, res) => {
@@ -66,6 +47,9 @@ export const register = async (req, res) => {
     //return res.json({ success: false, message: error.message });
   }
 };
+
+
+
 
 // 📦 Login user
 export const login = async (req, res) => {
