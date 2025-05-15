@@ -17,11 +17,14 @@ import Login from './components/login/Login'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/navbar/Navbar';
+import { AppContextProvider } from './context/AppContext';
+
 axios.defaults.baseURL = 'http://localhost:5000/api';
 axios.defaults.withCredentials = true;
 
 function App() {
     return (
+        <AppContextProvider> 
         <Router>
              <ToastContainer />
             <Navbar/>
@@ -37,6 +40,7 @@ function App() {
             </Routes>
             <Footer />
         </Router>
+        </AppContextProvider>
     );
 }
 

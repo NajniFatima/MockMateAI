@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { AppContent } from '../../context/AppContext.js';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 import '../navbar/Navbar.js';
 import '../navbar/Navbar.css';
 
 const Login = () => {
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useContext(AppContent);
+  const { setIsLoggedIn, setUserData, getUserData } = useContext(AppContent);
 
   const [state, setState] = useState('Sign up');
   const [name, setName] = useState('');
@@ -29,24 +30,16 @@ const Login = () => {
           password,
         });
 
+         console.log('Register response:', data); // ✅ Debugging
+
         if (data.success) {
-          // Save token
           localStorage.setItem('token', data.token);
+          toast.success('Registered successfully');
+          await getUserData();
+          navigate('/');
 
-          // Send OTP email (protected route, requires token)
-          await axios.post(
-            'http://localhost:5000/api/auth/send-verify-otp',
-            {},
-            {
-              headers: {
-                Authorization: `Bearer ${data.token}`,
-              },
-            }
-          );
-
-          setIsLoggedIn(true);
-          navigate('/', { state: { userId: data.userId } });
-        }else {
+       
+        } else {
           toast.success(data.message);
         }
       } else {
@@ -56,28 +49,22 @@ const Login = () => {
         });
 
         if (data.success) {
-          // Save token
           localStorage.setItem('token', data.token);
-          setIsLoggedIn(true);
+          toast.success('Logged in successfully');
+          await getUserData();
           navigate('/');
-         } else {
-           toast.success(data.message);
+        } else {
+          toast.success(data.message);
         }
       }
     } catch (error) {
-       toast.error(error.response?.data?.message || 'Something went wrong');
+      console.error('Auth error:', error);
+      toast.error(error.response?.data?.message || 'Something went wrong');
     }
   };
 
   return (
     <div className="login-container">
-      <img
-        onClick={() => navigate('/')}
-        src={assets.logo}
-        alt="Logo"
-        className="login-logo"
-      />
-
       <div className="login-card">
         <h2>{state === 'Sign up' ? 'Create Account' : 'Login'}</h2>
         <p>{state === 'Sign up' ? 'Create your account' : 'Login to your account'}</p>
@@ -118,9 +105,9 @@ const Login = () => {
             />
           </div>
 
-          <p onClick={() => navigate('/reset-password')} className="forgot-password">
+          {/* <p onClick={() => navigate('/reset-password')} className="forgot-password">
             Forgot password?
-          </p>
+          </p> */}
 
           <button type="submit">{state}</button>
         </form>
@@ -142,5 +129,3 @@ const Login = () => {
 };
 
 export default Login;
-
-

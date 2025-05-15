@@ -1,4 +1,14 @@
 .login-container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #cbd5e1, #a78bfa);
+  position: relative;
+  padding: 20px; */
+
+
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +16,8 @@
   background: linear-gradient(to bottom right, #cbd5e1, #a78bfa);
   position: relative;
   padding: 20px;
+  margin-top: -64px; /* ✅ Lifts content up under the sticky navbar */
+
 }
 
 .login-logo {
