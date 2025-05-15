@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './header.css';
+import { assets } from '../../assets/assets';
+import { AppContent } from '../../context/AppContext';
+import { useNavigate } from 'react-router-dom';
 
-function Header() {
-    return (
-        <>
-            <header className="header">
-                <h1>Mockmate AI</h1>
-                <nav>
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Company</a>
-                    <a href="#">Contact</a>
-                </nav>
-                <div className="profile-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" />
-                </div>
-            </header>
-        </>        
-    );
-}
+const Header = () => {
+
+  const {userData} = useContext(AppContent)
+  const navigate = useNavigate();
+  
+  
+    const handleClick = () => {
+      navigate('/login');
+    };
+
+  
+
+  return (
+    <div className="header-container">
+      <img src={assets.header_img} alt="" className="header-image" />
+
+      <h1 className="header-title">
+        Hey {userData ? userData.name : "Developer"}!
+        <img className="hand-wave" src={assets.hand_wave} alt="wave" />
+      </h1>
+
+      <h2 className="header-subtitle">Welcome to MockMateAI</h2>
+
+      <p className="header-description">
+      Your journey to success starts now! Every small step you take today brings you closer to your dreams.
+      </p>
+
+      <button onClick={handleClick} className="get-started-button">Get Started</button>
+    </div>
+  );
+};
 
 export default Header;

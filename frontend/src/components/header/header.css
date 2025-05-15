@@ -22,4 +22,8 @@ nav a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    /* -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:; */
 }

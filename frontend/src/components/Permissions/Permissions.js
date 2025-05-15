@@ -1,6 +1,4 @@
 
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Permissions.css";
@@ -14,7 +12,7 @@ const Permissions = () => {
     const handleProceed = async () => {
         if (selectedCompany && micAllowed && camAllowed) {
             try {
-                const response = await fetch("http://localhost:5000/select-company", {
+                const response = await fetch("http://localhost:5100/select-company", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
